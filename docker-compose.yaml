@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   api:
-    build: ./api
+    image: sachinabs/api:latest
     container_name: api_c
     ports:
       - '4000:4000'
@@ -9,7 +9,7 @@ services:
       - ./api:/app
       - ./app/node_modules
   myblog:
-    build: ./myblog
+    image: sachinabs/myblog:latest
     container_name: myblog_c
     ports:
       - '3000:3000'
